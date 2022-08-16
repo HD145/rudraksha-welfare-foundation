@@ -4,6 +4,9 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 // import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
+import HomeHeading from "../HomeHeading/HomeHeading";
+import Navbar from "../Navbar/Navbar";
+import FooterPagePro from "../Footer/Footer";
 
 function Interview() {
   const [image, setImage] = useState(null);
@@ -175,6 +178,9 @@ function Interview() {
   }
 
   return (
+    <>
+    <HomeHeading/>
+        <Navbar/>
     <div>
       <div className="InterviewHeader">
         <img src={require("../../Images/interview.jpg")} />
@@ -823,6 +829,9 @@ function Interview() {
         </div>
       </form>
     </div>
+       
+    <FooterPagePro/>
+    </>
   );
 }
 

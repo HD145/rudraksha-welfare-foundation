@@ -1,44 +1,49 @@
 .BodyLogin{
-    width: 100%;
-    height: 100vh;
+    /* width: 100%; */
+    height: 39vh;
+    margin-bottom: 10rem;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
+    left: 0rem;
+    /* border: 2px solid red; */
+    
 }
 
 .MainLogin{
     
-    width: 25%;
+    /* width: 25%; */
     margin:auto ;
     padding: 10px;
     position: absolute;
     left: 35%;
     top:35%;
+
     
 }
 
 
 .NavLogin{
     padding: 20px;
-    background-color: #2FA4FF;
+    /* background-color: #2FA4FF; */
     text-align: center;
+    
 }
 
 
-.NavLogin img{
+/* .NavLogin img{
     position: relative;
     right: 50px;
     border-radius: 100%;
     height: 100px;
     width: 100px;
-}
+} */
 
 .NavLogin h2{
-    width: fit-content;
-    margin: auto;
+    /* width: fit-content; */
     font-size: 3rem;
-    color: white;
-    font-weight: lighter;
+    margin: auto;
+    font-weight: bold;
     position: relative    ;
     right: 50px;
 }
@@ -163,7 +168,7 @@ height: 100px;
 
 
     .NavLogin{
-        border: 2px solid black;
+        /* border: 2px solid black; */
         
     }
 

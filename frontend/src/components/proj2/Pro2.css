@@ -86,7 +86,8 @@
   top: 5px;
 }
 .Main3Pro2 ol li {
-  font-weight: bolder;
+  font-weight: normal;
+  font-size: 1.1rem;
 }
 
 .Main3Pro2 img {
@@ -124,7 +125,8 @@
 }
 
 .Main5Pro2 ol li {
-  font-weight: bolder;
+  font-weight: normal;
+  font-size: 1.1rem;
 }
 
 .Main4Pro2 img {
@@ -163,4 +165,14 @@ p {
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.5rem;
+}
+
+.pr2span{
+  height: 26rem;
+}
+
+@media only screen and (max-width: 480px){
+  .pr2span{
+    height: 33rem;
+  }
 }

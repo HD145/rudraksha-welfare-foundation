@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
+import FooterPagePro from '../Footer/Footer'
+import HomeHeading from '../HomeHeading/HomeHeading'
+import Navbar from '../Navbar/Navbar'
 
 import "./Survey.css";
 
@@ -296,6 +299,10 @@ function Survey() {
   };
 
   return (
+    <>
+    <HomeHeading/>
+    <Navbar/>
+
     <div className="SurveyMain">
       <div className="SurveyHeader">
         <img src={require("../../Images/survey1.jpg")} />
@@ -304,11 +311,12 @@ function Survey() {
       <div className="SurveyMainBody container">
         <div className="SurveyBody">
           <div className="SurveyFormHeading">
-            <img src={require("../../Images/RWFLOGO.png")} />
+            {/* <img src={require("../../Images/RWFLOGO.png")} /> */}
             <h2>
-              <span>TEA</span>
-              <span>SURVEY</span>
-              <span>FORM</span>
+              <span><u>TEA SURVEY FORM</u></span>
+              {/* <span>SURVEY</span>
+              <span>FORM</span> */}
+              {/* <h4>TEA SURVEY FORM</h4> */}
             </h2>
           </div>
 
@@ -316,7 +324,7 @@ function Survey() {
             <form action="/record/add" onSubmit={onSubmit} method="POST">
               <div className="SurveyFormdiv1">
                 <div className="FromDivHead1">
-                  <h4>1.General Information</h4>
+                  <h4 style={{"color":"black"}}>1.General Information</h4>
                   <hr className="hr1" />
                 </div>
 
@@ -363,7 +371,7 @@ function Survey() {
 
               <div className="SurveyFormdiv2">
                 <div className="FromDivHead1">
-                  <h4>2. Please Select The Appropriate Options</h4>
+                  <h4 style={{"color":"black"}}>2. Please Select The Appropriate Options</h4>
                   <hr className="hr2" />
                 </div>
 
@@ -605,7 +613,7 @@ function Survey() {
 
               <div className="SurveyFormdiv3">
                 <div className="FromDivHead1">
-                  <h4>3. A Brief Feedback For Siddhi Tea</h4>
+                  <h4 style={{"color":"black"}}>3. A Brief Feedback For Siddhi Tea</h4>
                   <hr className="hr3" />
                 </div>
 
@@ -638,7 +646,7 @@ function Survey() {
                       }
                     />
                     <label class="form-check-label" for="inlineRadio2">
-                      No
+                      No 
                     </label>
                   </div>
                 </div>
@@ -688,6 +696,8 @@ function Survey() {
         </div>
       </div>
     </div>
+    <FooterPagePro/>
+        </>
   );
 }
 

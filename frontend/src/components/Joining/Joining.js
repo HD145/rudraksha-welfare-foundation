@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 
+
 function Joining() {
   const Submitrec = () => {
     if (
@@ -108,6 +109,7 @@ function Joining() {
   }
 
   return (
+    
     <div>
       <div className="JoiningHeader">
         <img src={require("../../Images/joining.jpg")} />
@@ -614,6 +616,7 @@ function Joining() {
         </div>
       </form>
     </div>
+ 
   );
 }
 

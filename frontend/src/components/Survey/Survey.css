@@ -53,7 +53,9 @@
 
 
 .SurveyFormHeading span:nth-child(1){
-    color: orangered;
+    color: black;
+    font-weight: bold;
+    font-size: 2.4rem;
 }
 .SurveyFormHeading span:nth-child(2){
     color: skyblue;
@@ -121,7 +123,7 @@
     /* height: 50px; */
     padding-top: 30px;
     /* margin: auto; */
-
+    display: flex;
     /* border: 2px solid black; */
     text-align: center;
 
@@ -142,7 +144,7 @@
     font-weight: bold;
     color: #000000;
     margin-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid none;
     outline: none;
     background: transparent;
 }
@@ -232,11 +234,11 @@
 
 
 .surveyformdivs input {
-    border: 2px solid orangered;
+    /* border: 2px solid orangered; */
 }
 
 .SurveyFormdiv1 .surveyformdivs select {
-    border: 2px solid orangered;
+    /* border: 2px solid orangered; */
 }
 
 
@@ -246,7 +248,7 @@
 }
 
 .SurveyFormdiv2 .surveyformdivs select {
-    border: 2px solid skyblue;
+    /* border: 2px solid skyblue; */
 }
 
 .SurveyFormdiv2 h4{
@@ -254,7 +256,7 @@
 }
 
 .SurveyFormdiv3 .surveyformdivs select {
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 .SurveyFormdiv3 h4{
     color: green;
@@ -262,17 +264,17 @@
 
 .hr1{
     border-bottom:2px solid ;
-    color: orangered;
+    color: black;
 }
 
 .hr2{
     border-bottom:2px solid ;
-    color: skyblue;
+    color: black;
 }
 
 .hr3{
     border-bottom:2px solid ;
-    color: green;
+    color: black;
 }
 
 

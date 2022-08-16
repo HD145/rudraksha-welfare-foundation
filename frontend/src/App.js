@@ -2,6 +2,7 @@ import "./App.css";
 
 import { Route, Switch } from "react-router-dom";
 // Shivank*********
+// Harshit*********
 
 import COC from "./components/CodeOfConduct/COC";
 import CoreValues from "./components/CoreValues/CoreValues";

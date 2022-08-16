@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-left: -12rem;    
 }
 .parent{
     display: flex;

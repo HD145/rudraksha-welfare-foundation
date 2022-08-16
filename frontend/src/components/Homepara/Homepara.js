@@ -13,7 +13,7 @@ function Homepara() {
                         towards the social issues & vanquished weaker sections of the society.
                     </span>
                     <span>
-                        RELIGION; has become an enormous pursuit of acquiring an individual’s character and molding it for personal
+                        RELIGION has become an enormous pursuit of acquiring an individual’s character and molding it for personal
                         benefit than uniting the souls for the betterment of the society in a larger context. The name of our Foundation
                         has been set up with a crystal clear contemplation towards SHIVA SHAKTI which guides us to help the
                         underprivileged or forcefully deprived individual(s) & protect his or her rights without making any

@@ -2,6 +2,9 @@ import React from "react";
 import "./Rec.css";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import HomeHeading from "../HomeHeading/HomeHeading";
+import Navbar from "../Navbar/Navbar";
+import FooterPagePro from "../Footer/Footer";
 
 function Rec() {
   const [vacstyle, setvacstyle] = useState({ display: "none" });
@@ -189,20 +192,24 @@ function Rec() {
   };
 
   return (
+    <>
+    <HomeHeading/>
+        <Navbar/>
     <div>
+      
       <div className="RecHeader">
         <img src={require("../../Images/Rec.jpg")} />
       </div>
 
       <div className="RecMain container">
         <div className="Recdiv1heading">
-          <h4>Personal Information</h4>
+          <h4 className="perhead">Personal Information</h4>
           <hr></hr>
         </div>
         <form action="/recruit/add" onSubmit={onSubmit} method="POST">
           <div className="Recdiv1">
             <div>
-              <label for="RecUserName">User Name</label>
+              <label for="RecUserName">Username</label>
               <input
                 type="text"
                 required
@@ -508,6 +515,9 @@ function Rec() {
         </form>
       </div>
     </div>
+    
+    <FooterPagePro/>
+    </>
   );
 }
 

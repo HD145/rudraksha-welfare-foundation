@@ -13,12 +13,10 @@ function Homepro() {
 
   return (
     <div>
-      <div className='Projectheading'>
+      <div className='Projectheading' sty>
         <div className='Fadeeffect'></div>
-        <h1>OUR PROJECTS</h1>
-        
-        
-        </div>
+        <h1 style={{"margin-top":"-1rem"}}>OUR PROJECTS</h1>
+      </div>
         
         
 

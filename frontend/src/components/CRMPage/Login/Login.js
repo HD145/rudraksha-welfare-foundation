@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import styles from "./Login.module.css";
+import FooterPagePro from '../../Footer/Footer'
+import HomeHeading from '../../HomeHeading/HomeHeading'
+import Navbar from '../../Navbar/Navbar'
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -42,9 +45,12 @@ const Login = () => {
     }
   };
   return (
+    <>
+    <HomeHeading/>
+    <Navbar/>
     <div className={styles.login__main}>
       <form className={styles.login__form} onSubmit={handleSubmit}>
-        <h3>Sign In</h3>
+        <h3><u>Sign In</u></h3>
 
         <div className="mb-3">
           <label>Email address</label>
@@ -78,12 +84,14 @@ const Login = () => {
           </button>
         </div>
         <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
+        <a href="#">Forgot Password</a>
         </p>
        
         <div style={{ color: "red" }}>{error}</div>
       </form>
     </div>
+    <FooterPagePro/>
+    </>
   );
 };
 export default Login;

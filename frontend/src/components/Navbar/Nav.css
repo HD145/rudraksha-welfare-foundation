@@ -1,31 +1,38 @@
-nav{
-    padding-top: 20px;
-}
+
 .mainnav{
     /* text-align: center; */
     z-index: 2;
     
 }
 
-.navbar2{
+/* .navbar2{
     margin: auto;
-    /* border: 5px solid black; */
+    border: 5px solid black;
+    margin-top: -21px;
+    background: #ff9d1f;
    
    
-}
+} */
 
 .nav-item{
     padding: 5px;
+    /* font-size: 1.1rem; */
 }
 
 .nav-item:hover{
     
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    /* border-top: 2px solid black;
+    border-bottom: 2px solid black; */
+    /* color: #3b5999; */
+    font-size: 1.08rem;
+    cursor: pointer;
+   
+    
 }
 
 .nav-item a{
     color: black;
+    /* font-size: bold; */
 }
 
 
@@ -164,4 +171,5 @@ nav{
 .dropbtn2{
   margin-top: 18px;
   margin-right: 10px;
+  color: white;
 }

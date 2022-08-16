@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./LoginPage.css";
 import { useHistory } from "react-router-dom";
 import Interview from "../Interview/Interview";
+import FooterPagePro from '../Footer/Footer'
+import HomeHeading from '../HomeHeading/HomeHeading'
+import Navbar from '../Navbar/Navbar'
 
 function LoginLogin() {
   let history = useHistory();
@@ -58,10 +61,14 @@ function LoginLogin() {
     }
   };
   return (
+    <>
+    <HomeHeading/>
+    <Navbar/>
+
     <div className="BodyLogin">
       <div className="NavLogin">
-        <img src={require("../../Images/RWFLOGO.png")} />
-        <h2>Joining Login</h2>
+        {/* <img src={require("../../Images/RWFLOGO.png")} /> */}
+        <h2><u>Joining Login</u></h2>
       </div>
       <div className="MainLogin">
         <form onSubmit={handleFormSubmit}>
@@ -113,6 +120,8 @@ function LoginLogin() {
         </form>
       </div>
     </div>
+    <FooterPagePro/>
+        </>
   );
 }
 

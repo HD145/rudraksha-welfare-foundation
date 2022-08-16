@@ -3,10 +3,10 @@ import "./Nav.css";
 
 function Navbar() {
   return (
-    <div>
-      <nav>
-        <nav className="navbar navbar-expand-lg  bg-transparent">
-          <div className="navbar-header">
+    
+      <nav className="navbar navbar-expand-lg navbar-dark bg-danger p-0">
+
+      <div className="navbar-header">
             <button
               className="navbar-toggler navbtn"
               type="button"
@@ -23,7 +23,7 @@ function Navbar() {
             </button>
           </div>
           <div className="container-fluid mainnav ">
-            <div className="navbar2">
+            <div className="navbar2" style={{"background":"#ff9d1f;", "height":"4rem"}}>
               <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                   <li className="nav-item">
@@ -81,19 +81,19 @@ function Navbar() {
                   </li>
                   
                   <li className="nav-item dropdown">
-                    <div class="dropdown">
+                    <div className="dropdown">
                     <li className="dropbtn2">Organiogram</li>
-                      <div class="dropdown-content">
+                      <div className="dropdown-content">
                         <a href="/organigram">Organiogram</a>
                         <a href="/management">Management</a>
-                        <a href="/coc">CodeOfConduct</a>
+                        <a href="/coc">Code Of Conduct</a>
                       </div>
                     </div>
                   </li>
                   <li className="nav-item dropdown">
-                    <div class="dropdown">
-                    <li className="dropbtn2">Carrier</li>
-                      <div class="dropdown-content">
+                    <div className="dropdown">
+                    <li className="dropbtn2">Career</li>
+                      <div className="dropdown-content">
                         <a href="/rec">Recruitments</a>
                         <a href="/loginI">Interview Form</a>
                         <a href="/loginJ">Joining Form</a>
@@ -106,9 +106,9 @@ function Navbar() {
                     </a>
                   </li>
                   <li className="nav-item dropdown">
-                    <div class="dropdown">
+                    <div className="dropdown">
                     <li className="dropbtn2">Login</li>
-                      <div class="dropdown-content">
+                      <div className="dropdown-content">
                         <a href="/organigram">Numero</a>
                         <a href="/management">Employee</a>
                         <a href="/crm">RMS</a>
@@ -135,43 +135,20 @@ function Navbar() {
                       Survey
                     </a>
                   </li>
+                  <li className="nav-item">
+                    <a className="nav-link active" href="/survey">
+                      Support Us
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </nav>
 
-        <nav className="social">
-          <ul>
-            <li class="twitter">
-              <a href="https://codepen.io/collection/XdWJOQ/">
-                Twitter<i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="facebook">
-              <a href="https://codepen.io/collection/XdWJOQ/">
-                Facebook<i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="youtube">
-              <a href="https://codepen.io/collection/XdWJOQ/">
-                YouTube<i class="fa fa-youtube" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="instagram">
-              <a href="https://codepen.io/collection/XdWJOQ/">
-                Instagram<i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="linkedin">
-              <a href="https://codepen.io/collection/XdWJOQ/">
-                Linkedin<i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </nav>
-    </div>
+
+
+    
   );
 }
 

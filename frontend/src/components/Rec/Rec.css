@@ -66,12 +66,15 @@
 }
 
 .Recdiv1heading h4{
-    font-weight: lighter;
-    color: #2FA4FF;
+    font-weight: bold;
+    /* color: #2FA4FF; */
+    color: black;
+    
 }
 
 .Recdiv1heading hr{
-    color: #2FA4FF;
+    /* color: #2FA4FF; */
+    color: black;
 }
 
 
@@ -81,7 +84,7 @@
 }
 
 .RecMain label{
-    font-weight: lighter;
+    font-weight: bold;
 }
 
 .ResumeFile{
