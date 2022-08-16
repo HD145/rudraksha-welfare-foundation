@@ -35,7 +35,7 @@ function COC() {
                 url: require('../CodeOfConduct/IBLOG REPORT.pdf'),
             }}
         /> */}
-        <iframe src={require('../CodeOfConduct/IBLOG REPORT.pdf')} width="80%" height="700px" style={{"margin-top":"1rem", "margin-left":"8rem"}}>
+        <iframe src={require('../CodeOfConduct/rwf coc.pdf')} width="80%" height="700px" style={{"margin-top":"1rem", "margin-left":"8rem"}}>
         </iframe>
 
 

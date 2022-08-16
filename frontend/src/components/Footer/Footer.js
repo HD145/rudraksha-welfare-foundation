@@ -25,13 +25,13 @@ export default function FooterPagePro() {
       <i class="fa fa-map-marker"></i>
       <p>Office No. 754, Cabin No. 9, First Floor, Mohalla Dehra Sahib,Near NAC Manimajra Chandigarh, UT:160101</p>
     </div>
-    <div>
+    {/* <div>
       <i class="fa fa-phone"></i>
       <p> (+00) 0000 000 000</p>
-    </div>
+    </div> */}
     <div>
       <i class="fa fa-envelope"></i>
-      <p><a href="#"> office@company.com</a></p>
+      <p><a href="#"> https://rudraksha.org.in/</a></p>
     </div>
   </div>
   <div class="footer-right col-md-4 col-sm-6">
