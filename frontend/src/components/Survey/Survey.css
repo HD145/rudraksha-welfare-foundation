@@ -115,7 +115,6 @@
     margin-left: 15px;
     margin-right: 15px;
     
-
 }
 
 .surveyformdivsradio {
@@ -296,6 +295,8 @@
         bottom: 30px;
         
         }
+
+    
     .surveyformdivs label{
         font-size: 0.8rem;
     }
@@ -305,8 +306,14 @@
 
     .spprice{
         position: relative;
-        left: 68px;
-        bottom:100px;
+        /* left: 68px; */
+        bottom:60px;
+    }
+
+    .spquality{
+        position: relative;
+        left: 38px;
+        /* bottom:60px; */
     }
 
     .FromDivHead1 h4{

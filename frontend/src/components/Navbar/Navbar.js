@@ -5,7 +5,7 @@ function Navbar() {
   return (
 <>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger mb-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-0">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@ function Navbar() {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link ml-4" href="/">Home</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/agenda">Agenda</a>

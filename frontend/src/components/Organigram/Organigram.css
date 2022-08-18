@@ -15,10 +15,11 @@
     align-items: center;
 
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .MainOrgani {
-        width: 500vw;
-        height: 60vh;
+        width: 132vw;
+        height: 50vh;
+        margin-left: -80px;
         background-image: url("../../Images/newOC.jpeg");
         background-size: cover;
         overflow: auto;

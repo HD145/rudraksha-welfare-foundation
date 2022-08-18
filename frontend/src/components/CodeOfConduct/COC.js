@@ -35,10 +35,9 @@ function COC() {
                 url: require('../CodeOfConduct/IBLOG REPORT.pdf'),
             }}
         /> */}
-        <iframe src={require('../CodeOfConduct/rwf coc.pdf')} width="80%" height="700px" style={{"margin-top":"1rem", "margin-left":"8rem"}}>
+        {/* {require('../CodeOfConduct/rwf coc.pdf')} */}
+        <iframe src="" width="80%" height="700px" style={{"margin-top":"1rem", "margin-left":"8rem"}}>
         </iframe>
-
-
       
     </div>
     <FooterPagePro/>

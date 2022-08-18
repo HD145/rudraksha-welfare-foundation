@@ -618,7 +618,7 @@ function Survey() {
                 </div>
 
                 <div className="surveyformdivsradio ">
-                  <label>Have You Tried Siddhi Tea</label>
+                  <label>Have You Tried Siddhi Tea</label> 
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
@@ -634,6 +634,7 @@ function Survey() {
                       Yes
                     </label>
                   </div>
+                  
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
@@ -651,7 +652,7 @@ function Survey() {
                   </div>
                 </div>
 
-                <div className="surveyformdivs">
+                <div className="surveyformdivs spquality">
                   <label for="inputSiddhiquality">Siddhi Tea Quality</label>
                   <select
                     id="inputSiddhiquality"
