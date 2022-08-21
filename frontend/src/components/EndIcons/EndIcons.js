@@ -103,11 +103,11 @@ function EndIcons() {
 
 
                         </div>
-                        <div className='Slide'>
+                        {/* <div className='Slide'>
                         <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/M_APP_DEVS/anil kumar.jpeg')} />
 
-                        </div>
+                        </div> */}
                         <div className='Slide'>
                         <a href="https://www.linkedin.com/in/saumya-vyas-564b881aa/"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/web_Devs/saumya.jpg')} />
@@ -148,11 +148,11 @@ function EndIcons() {
 
                         </div>
                         
-                        <div className='Slide'>
+                        {/* <div className='Slide'>
                         <a href="https://www.linkedin.com/in/yasha-mishra-087072185"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/web_Devs/WebDeveloper_RitikKundlas2.jpg')} />
 
-                        </div>
+                        </div> */}
                         <div className='Slide'>
                         <a href="https://www.linkedin.com/in/yasha-mishra-087072185"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/web_Devs/WebDeveloper_SuchitraRuduru.jpg')} />
@@ -378,11 +378,11 @@ https://www.linkedin.com/in/deepanshu-m-7893a1118"><img className='Linked' src={
 
                         </div>
 
-                        <div className='Slide'>
+                        {/* <div className='Slide'>
                         <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/web and app/anil.png')} />
 
-                        </div>
+                        </div> */}
 
                         <div className='Slide'>
                         <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
