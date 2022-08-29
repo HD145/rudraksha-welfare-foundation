@@ -114,9 +114,9 @@ function Navbar() {
       <li class="nav-item">
         <a class="nav-link" href="/survey">Survey</a>
       </li>
-      <li class="nav-item">
+      {/* <li class="nav-item">
         <a class="nav-link" href="/survey">Support Us</a>
-      </li>
+      </li> */}
   
     </ul>
     

@@ -16,6 +16,7 @@ import pdfMake from "pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 import htmlToPdfmake from "html-to-pdfmake";
 import logo from "../Reports/logo";
+import axios from "axios";
 export const CMS = () => {
 
 
@@ -39,6 +40,28 @@ const upData=(e)=>{
   })
 }
 
+const handleSubmitCMS=(e)=>{
+  e.preventDefault();
+          axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/courier.routes/addCourier`,
+          {
+             volId:data.volId,
+             amt:data.amount,
+             donDate:data.date,
+             orderId:data.orderId
+          },{
+              headers: {
+                // "Content-Type": "multipart/form-data",
+                Authorization: `Bearer ${JSON.parse(
+                  localStorage.getItem("rudraksha")
+                )}`,
+              },
+            }).then((res)=>{
+              console.log(res);
+          }).catch((err)=>{
+              console.log(err);
+          })
+      }
+
   return (
     <>
     
@@ -56,7 +79,7 @@ const upData=(e)=>{
             </div>
             
           </div>  
-          <Form className={styles.DMS__form}>
+          <Form className={styles.DMS__form} onSubmit={handleSubmitCMS}>
         <div className={styles.DMS__form2}>
 <Row>
 <Form.Group as={Col} md="4" controlId="validationFormik01">
@@ -230,7 +253,7 @@ const upData=(e)=>{
 
         </div>
         <div className="text-center">
-          <Button className="btn btn-primary mb-3" type="#">Submit</Button>  
+          <Button className="btn btn-primary mb-3" type="submit">Submit</Button>  
         </div>
         </Form>
         </div>
