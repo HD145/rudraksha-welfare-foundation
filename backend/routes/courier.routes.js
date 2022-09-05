@@ -4,12 +4,13 @@ const router = express.Router();
 const {authentication, onlyAdmin} = require('../middlewares/auth');
 
 const courierModel = require('../models/courier.model');
-
+ 
 router.post('/addCourier', async(req, res) => {
     try{
         const newCourier = new courierModel({
             ...req.body
-        });
+        }); 
+        console.log(req.body);
         const saveCourier = await newCourier.save();
         res.status(201).json({
             success: true,

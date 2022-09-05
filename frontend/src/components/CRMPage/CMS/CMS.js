@@ -17,6 +17,9 @@ import pdfFonts from "pdfmake/build/vfs_fonts";
 import htmlToPdfmake from "html-to-pdfmake";
 import logo from "../Reports/logo";
 import axios from "axios";
+import Navbar from "react-bootstrap/Navbar";
+
+
 export const CMS = () => {
 
 
@@ -42,12 +45,19 @@ const upData=(e)=>{
 
 const handleSubmitCMS=(e)=>{
   e.preventDefault();
-          axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/courier.routes/addCourier`,
-          {
-             volId:data.volId,
-             amt:data.amount,
-             donDate:data.date,
-             orderId:data.orderId
+          axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/courier/addCourier`,
+          { 
+            
+            action:data.action,
+            services:data.services,
+            type:data.type,
+            from:data.from,
+            to:data.to,
+            pickup:data.pickup,
+            drop:data.drop,
+            phone:data.phone,
+            trackingid:data.trackingid,
+            cost:data.cost,
           },{
               headers: {
                 // "Content-Type": "multipart/form-data",
@@ -57,13 +67,26 @@ const handleSubmitCMS=(e)=>{
               },
             }).then((res)=>{
               console.log(res);
+              alert("Successfully saved to DB")
+
           }).catch((err)=>{
+
               console.log(err);
           })
       }
 
   return (
     <>
+
+    <Navbar bg="light" variant="light">
+    <Nav className="me-auto">
+      
+    <Nav.Link href="/CMS/CMSReport" className="text-primary">
+     Reports
+    </Nav.Link>
+    
+     </Nav>
+    </Navbar>
     
     <div className={styles.DMS__main}>
         <div className={styles.DMS__shadow}>
@@ -173,6 +196,7 @@ const handleSubmitCMS=(e)=>{
                   <Form.Select
                     aria-label="Default select example"
                     name="services"
+                    type="text"
                     className="mb-3"
                     value={data.services}
                     onChange={upData}                      
@@ -240,11 +264,11 @@ const handleSubmitCMS=(e)=>{
 
                   
                 </Form.Group>
-                <Form.Group as={Col} md="4" controlId="validationFormik02">
+                {/* <Form.Group as={Col} md="4" controlId="validationFormik02">
                 <label class="form-label" for="validationFormik01">Picture of the package</label>
                 <input name="firstVaccinationDate" required="" type="file" id="validationFormik01" class="form-control"></input>
                  
-                </Form.Group>
+                </Form.Group> */}
 
                 
                   

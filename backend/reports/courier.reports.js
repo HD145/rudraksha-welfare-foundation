@@ -15,14 +15,16 @@ router.post('/reports-monthly-courier', async(req, res) => {
         let final = [];
         if(couriers.length > 0){
             couriers.forEach(async(courier) => {
-                if(courier.from.getMonth() === Number(month) && courier.from.getFullYear() === Number(year)){
+                if(courier.createdAt.getMonth() === Number(month) && courier.createdAt.getFullYear() === Number(year)){
                     courierDetails.push(courier);
-                    mnth = courier.from.toLocaleString('default', { month: 'long' });
+                    mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                     count++;
                 }
             });
         }
+        
         final.push({label: mnth, value: count, color: "#D61C4E"});
+        console.log(courierDetails)
         res.status(200).json({
             success: true,
             data: {
@@ -75,36 +77,36 @@ router.post('/reports-quarterly-courier', async(req, res) => {
         if(couriers.length > 0){
             couriers.forEach(async(courier) => {
                 if(Number(quarter) === 0){
-                    if((courier.from.getMonth() === 0 || courier.from.getMonth() === 1 || courier.from.getMonth() === 2) && courier.from.getFullYear() === Number(year)){
+                    if((courier.createdAt.getMonth() === 0 || courier.createdAt.getMonth() === 1 || courier.createdAt.getMonth() === 2) && courier.createdAt.getFullYear() === Number(year)){
                         courierDetails.push(courier);
-                        let mnth = courier.from.toLocaleString('default', { month: 'long' });
+                        let mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                         if(mnth in quarter0){
                             quarter0[mnth] += 1;
                         }
                     }
                 }
                 if(Number(quarter) === 1){
-                    if((courier.from.getMonth() === 3 || courier.from.getMonth() === 4 || courier.from.getMonth() === 5) && courier.from.getFullYear() === Number(year)){
+                    if((courier.createdAt.getMonth() === 3 || courier.createdAt.getMonth() === 4 || courier.createdAt.getMonth() === 5) && courier.createdAt.getFullYear() === Number(year)){
                         courierDetails.push(courier);
-                        let mnth = courier.from.toLocaleString('default', { month: 'long' });
+                        let mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                         if(mnth in quarter1){
                             quarter1[mnth] += 1;
                         }
                     }
                 }
                 if(Number(quarter) === 2){
-                    if((courier.from.getMonth() === 6 || courier.from.getMonth() === 7 || courier.from.getMonth() === 8) && courier.from.getFullYear() === Number(year)){
+                    if((courier.createdAt.getMonth() === 6 || courier.createdAt.getMonth() === 7 || courier.createdAt.getMonth() === 8) && courier.createdAt.getFullYear() === Number(year)){
                         courierDetails.push(courier);
-                        let mnth = courier.from.toLocaleString('default', { month: 'long' });
+                        let mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                         if(mnth in quarter2){
                             quarter2[mnth] += 1;
                         }
                     }
                 }
                 if(Number(quarter) === 3){
-                    if((courier.from.getMonth() === 9 || courier.from.getMonth() === 10 || courier.from.getMonth() === 11) && courier.from.getFullYear() === Number(year)){
+                    if((courier.createdAt.getMonth() === 9 || courier.createdAt.getMonth() === 10 || courier.createdAt.getMonth() === 11) && courier.createdAt.getFullYear() === Number(year)){
                         courierDetails.push(courier);
-                        let mnth = courier.from.toLocaleString('default', { month: 'long' });
+                        let mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                         if(mnth in quarter3){
                             quarter3[mnth] += 1;
                         }
@@ -224,9 +226,9 @@ router.post('/reports-halfYearly-courier', async(req, res) => {
         if(couriers.length > 0){
             couriers.forEach(async(courier) => {
                 if(Number(half) === 0){
-                    if((courier.from.getMonth() === 0 || courier.from.getMonth() === 1 || courier.from.getMonth() === 2 || courier.from.getMonth() === 3 || courier.from.getMonth() === 4 || courier.from.getMonth() === 5) && courier.from.getFullYear() === Number(year)){
+                    if((courier.createdAt.getMonth() === 0 || courier.createdAt.getMonth() === 1 || courier.createdAt.getMonth() === 2 || courier.createdAt.getMonth() === 3 || courier.createdAt.getMonth() === 4 || courier.createdAt.getMonth() === 5) && courier.createdAt.getFullYear() === Number(year)){
                         courierDetails.push(courier);
-                        let mnth = courier.from.toLocaleString('default', { month: 'long' });
+                        let mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                         if(mnth in half0){
                             half0[mnth] += 1;
                         }
@@ -234,9 +236,9 @@ router.post('/reports-halfYearly-courier', async(req, res) => {
                 }
 
                 if(Number(half) === 1){
-                    if((courier.from.getMonth() === 6 || courier.from.getMonth() === 7 || courier.from.getMonth() === 8 || courier.from.getMonth() === 9 || courier.from.getMonth() === 10 || courier.from.getMonth() === 11) && courier.from.getFullYear() === Number(year)){
+                    if((courier.createdAt.getMonth() === 6 || courier.createdAt.getMonth() === 7 || courier.createdAt.getMonth() === 8 || courier.createdAt.getMonth() === 9 || courier.createdAt.getMonth() === 10 || courier.createdAt.getMonth() === 11) && courier.createdAt.getFullYear() === Number(year)){
                         courierDetails.push(courier);
-                        let mnth = courier.from.toLocaleString('default', { month: 'long' });
+                        let mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                         if(mnth in half1){
                             half1[mnth] += 1;
                         }
@@ -317,8 +319,8 @@ router.post('/reports-yearly-courier', async(req, res) => {
         let courierDetails = [];
         if(couriers.length > 0){
             couriers.forEach(async(courier) => {
-                if(courier.from.getFullYear() === Number(year)){
-                    let mnth = courier.from.toLocaleString('default', { month: 'long' });
+                if(courier.createdAt.getFullYear() === Number(year)){
+                    let mnth = courier.createdAt.toLocaleString('default', { month: 'long' });
                     if(mnth in months){
                         months[mnth] += 1;
                     }

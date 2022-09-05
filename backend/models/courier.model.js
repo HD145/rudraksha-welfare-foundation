@@ -11,10 +11,10 @@ const courierSchema = new mongoose.Schema({
         type: String,
     },
     from: {
-        type: Date,
+        type: String,
     },
     to: {
-        type: Date,
+        type: String,
     },
     pickup: {
         type: String,

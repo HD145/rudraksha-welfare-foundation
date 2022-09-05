@@ -71,6 +71,8 @@ import Memo from "./components/CRMPage/Memo/Memo";
 import PMS from "./components/CRMPage/PMS/PMS";
 import Register from "./components/CRMPage/Register/Register";
 import { CMS } from "./components/CRMPage/CMS/CMS";
+import CMSReport from "./components/CRMPage/CMS/CMSReport/CMSReport"
+
 
 function App() {
   return (
@@ -141,6 +143,7 @@ function App() {
         <Route exact path="/Memo" component={Memo} />
         <Route exact path="/PMS" component={PMS} />
         <Route exact path="/CMS" component={CMS} />
+        <Route exact path="/CMS/CMSReport" component={CMSReport} />
         <Route exact path="/Register" component={Register} />
 
       </Switch>
