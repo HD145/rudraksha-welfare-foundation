@@ -26,7 +26,7 @@ function Management() {
                 <div className='MMdiv2'>
                     <div>
                     <h2>Aacharya Yogesh Kaushik</h2>
-                    <span>AACHARYA Yogesh Kumar Kaushik, hails from Haryana and holds a Masters Degree in Vedic Astrology, Karam Kaand, Vastu & HINDU Dharma Shastra in Sanskrit. He has a rich experience of 18+ years in Astrology, Vastu & HINDU Dharma Shastra. He is a shareholder Director in RUDRAKSHA WELFARE FOUNDATION since FY 2020-21 onwards.</span>
+                    <p style={{"font-weight":"100","font-size":"1.1rem"}}>AACHARYA Yogesh Kumar Kaushik, hails from Haryana and holds a Masters Degree in Vedic Astrology, Karam Kaand, Vastu & HINDU Dharma Shastra in Sanskrit. He has a rich experience of 18+ years in Astrology, Vastu & HINDU Dharma Shastra. He is a shareholder Director in RUDRAKSHA WELFARE FOUNDATION since FY 2020-21 onwards.</p>
                     </div>
                     <div className='ManageImg'>
                     <img src={require('../../Images/manage1.png')} />
@@ -52,7 +52,7 @@ function Management() {
                 <div>
                     <div>
                     <h2>Mr. Atul Dev Arora</h2>
-                    <span>Atul Dev Arora, is a localite from Chandigarh and holds Masters in IT, Cosmic Science, Social Work, CSR & DM. He has rich experience of 17+ years in National & International Projects of Ministry of Corporate Affairs, Regulatory Bodies, Government Organisations & Private Banks. He is the Founder & MD in RUDRAKSHA WELFARE FOUNDATION since FY 2019-20 onwards.</span>
+                    <p style={{"font-weight":"100","font-size":"1.1rem"}}>Atul Dev Arora, is a localite from Chandigarh and holds Masters in IT, Cosmic Science, Social Work, CSR & DM. He has rich experience of 17+ years in National & International Projects of Ministry of Corporate Affairs, Regulatory Bodies, Government Organisations & Private Banks. He is the Founder & MD in RUDRAKSHA WELFARE FOUNDATION since FY 2019-20 onwards.</p>
                     </div>
                     <div className='ManageImg'>
                     <img src={require('../../Images/manage4.jpg')} />

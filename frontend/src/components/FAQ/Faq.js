@@ -18,11 +18,11 @@ function Faq() {
 
         <section>
 
-        <p class="text-center my-3">
+        {/* <p class="text-center my-3">
             <u>Find the answers for the most frequently asked questions below</u>
         </p>
-      
-        <div class="row mx-5">
+       */}
+        <div class="row mx-5 mt-4">
             
             <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i>  What is the Objective of floating this Foundation?</h6>
             <span>

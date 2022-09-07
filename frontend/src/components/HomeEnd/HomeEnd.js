@@ -5,7 +5,7 @@ function HomeEnd() {
     return (
         <div className='container-fluid Homeend '>
            <div className='Endcontainer1'>
-               <p>
+               <p style={{"font-weight":"100","font-size":"1.1rem"}}>
                Our core target areas will be our younger generations which comprises primarily students who are the real strength of our Nation in future. We have a motive to assist them in their education, sports and take care of their medical & basic needs in order to make sure they can have an enriched and decent life and should later contribute towards the betterment of the society as well as Nation on a bigger context in future. In order to comply with the above dream project in longer years to come, we hereby would like to have a good amount of contribution from our society and various individuals who can contribute towards the society by offer charity in terms of their services, expertises, funds etc. but only through a legitimate means as per guidelines setup by Govt. of India.
                </p>
 
