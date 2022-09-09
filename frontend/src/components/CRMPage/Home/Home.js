@@ -1,8 +1,13 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { useHistory } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import { Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
+// import { useState, useEffect } from "react";
+// import { useHistory } from "react-router-dom";
+// import activestatus from "./activestatus"
+import axios from "axios";
+
 import styles from "./Home.module.css";
 const Home = () => {
   const navigate = useHistory();
@@ -16,13 +21,16 @@ const Home = () => {
     localStorage.clear();
     navigate.push("/crmlogin");
   };
+
+  const [status, setstatus] = useState("");
+  
+  const statusset=()=>{
+    setstatus("active")
+  }
+ 
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-
-
-
 
       <a class="navbar-brand" href="/crm">CRM PAGE</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +39,9 @@ const Home = () => {
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/rms">RMS </a>
+      <li class="nav-item" class={status}>
+        <a class="nav-link" href="/rms" onClick={statusset}>RMS </a>
+        
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/PMS">PMS</a>
@@ -82,10 +91,6 @@ const Home = () => {
     </ul>
     
   </div>
-
-
-
-
 
 
         {/* <Container>

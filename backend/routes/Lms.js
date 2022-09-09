@@ -11,13 +11,8 @@ const {
 const {
   authentication,
   costSheetApprovalAccess,
-  adminAccess,
   onlyAdmin
 } = require("../middlewares/auth");
-
-router.post("/addLeaveApplication", authentication, addLeaveApplication);
-//same middleware as costsheetapprovalAccess is used since approval is being done by same people
-router.post("/approveLeaves", costSheetApprovalAccess, approveLeaves);
 
 router.get("/getEmployeeLeaves", authentication, getEmployeeLeaves);
 

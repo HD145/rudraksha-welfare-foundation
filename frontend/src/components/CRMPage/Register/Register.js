@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import styles from "./Register.module.css";
-
+// import Home from "../Home/Home";
+import CRMNavbar from "../CRMNavbar/CRMNavbar"
 const Register = () => {
   const [data,setData]=useState({
     empId:"",
@@ -18,6 +19,8 @@ const Register = () => {
   //     navigate.push("/crm");
   //   }
   // }, []);
+
+
 
   const handleSubmit = async (e) => {
     // e.preventDefault();
@@ -49,7 +52,9 @@ setData({
 })
   }
   return (
-    <div className={styles.login__main}>
+    <>
+    <CRMNavbar/>
+    <div className={styles.login__main} className="mt-5">
       <form className={styles.login__form} onSubmit={handleSubmit}>
         <h3>Register</h3>
 
@@ -91,6 +96,7 @@ setData({
         <div style={{ color: "red" }}>{error}</div>
       </form>
     </div>
+    </>
   );
 };
 export default Register;

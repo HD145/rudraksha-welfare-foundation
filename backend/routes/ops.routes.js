@@ -1,34 +1,34 @@
 const express = require('express');
 const router = express.Router();
-const Admin = require("../models/Admin_Rudraksha.model");
-const Director = require("../models/Director_Rudraksha.model");
+const Ops = require("../models/ops");
+const Recept = require("../models/recept");
 const Employee = require("../models/employee");
 const {onlyAdmin} = require("../middlewares/auth")
 
-router.post("/createAdmin", onlyAdmin, async(req, res) => {
+router.post("/createOps", async(req, res) => {
     const {empId} = req.body;
     try {
         const emp = await Employee.findOne({_id: empId});
-        const admin = await Admin.findOne({empId});
+        const ops = await Ops.findOne({empId});
 
         if(emp){
-            if(!admin){
-                const newAdmin = new Admin({
+            if(!ops){
+                const newOps = new Ops({
                     empId,
                     email: emp.email,
                     fullName: emp.firstname + " " + emp.middlename + " " + emp.lastname,
                     username: emp.username
                 });
-                const saveAdmin = await newAdmin.save();
+                const saveOps = await newOps.save();
                 res.status(201).json({
                     success: true,
-                    data: saveAdmin,
-                    message: "Admin Created !!"
+                    data: saveOps,
+                    message: "Ops Created !!"
                 })
             } else {
                 res.status(400).json({
                     success: false,
-                    data: "Admin Already exists",
+                    data: "Ops Already exists",
                     message: "Try Adding another"
                 })
             }
@@ -50,29 +50,30 @@ router.post("/createAdmin", onlyAdmin, async(req, res) => {
     }
 });
 
-router.post("/makeDirector", onlyAdmin, async(req, res) => {
+router.post("/createRecept", async(req, res) => {
     const {empId} = req.body;
-    try{
+    try {
         const emp = await Employee.findOne({_id: empId});
-        const director = await Director.findOne({empId});
+        const recept = await Recept.findOne({empId});
 
         if(emp){
-            if(!director){
-                const newDirector = new Director({
+            if(!recept){
+                const newRecept = new Recept({
                     empId,
                     email: emp.email,
-                    fullName: emp.firstname + " " + emp.middlename + " " + emp.lastname
+                    fullName: emp.firstname + " " + emp.middlename + " " + emp.lastname,
+                    username: emp.username
                 });
-                const saveDirector = await newDirector.save();
+                const saveRecept = await newRecept.save();
                 res.status(201).json({
                     success: true,
-                    data: saveDirector,
-                    message: "Director Created !!"
-                });
+                    data: saveRecept,
+                    message: "Recept Created !!"
+                })
             } else {
                 res.status(400).json({
                     success: false,
-                    data: "Admin Already exists",
+                    data: "Recept Already exists",
                     message: "Try Adding another"
                 })
             }
@@ -83,6 +84,7 @@ router.post("/makeDirector", onlyAdmin, async(req, res) => {
                 message: "Wrong Employee ID !!"
             })
         }
+        
     }catch(e){
         console.log(e);
         res.status(500).json({
@@ -91,6 +93,6 @@ router.post("/makeDirector", onlyAdmin, async(req, res) => {
             message: "Something went wrong"
         })
     }
-});
+})
 
 module.exports = router;

@@ -7,7 +7,7 @@ import HomeHeading from '../../HomeHeading/HomeHeading'
 import Navbar from '../../Navbar/Navbar'
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [btndisable, setDisable] = useState(false);
@@ -28,7 +28,7 @@ const Login = () => {
       const { data } = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/api/login`,
         {
-          email,
+          username,
           password,
         }
       );
@@ -53,13 +53,13 @@ const Login = () => {
         <h3><u>Sign In</u></h3>
 
         <div className="mb-3">
-          <label>Email address</label>
+          <label>Enter Username</label>
           <input
             type="text"
             className="form-control"
-            placeholder="Enter email"
-            defaultValue={email}
-            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter username"
+            defaultValue={username}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </div>
 

@@ -49,6 +49,14 @@ const employeeSchema = mongoose.Schema(
     experience: {
       type: String,
     },
+    username:{
+     
+      type: String,
+      require: true,
+      trim: true,
+      unique: true,
+
+    },
     designation: String,
     location: {
       type: String,

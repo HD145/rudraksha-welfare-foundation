@@ -10,14 +10,14 @@ const {
 } = require("../controllers/event");
 const {
   authentication,
-  costSheetApprovalAccess,
+  opsAdmin,
 } = require("../middlewares/auth");
 
-router.post("/approveEvent", costSheetApprovalAccess, eventapproval);
+router.post("/approveEvent", opsAdmin, eventapproval);
 router.post("/addEvent", authentication, AddEvent);
 
 router.get("/getEvent/:eventabbreviation", getEvent);
 router.get("/getEventCodes/:projectHead", getEventCodes);
 router.get("/geteventsofuser", authentication, getEventsOfEmp);
-router.get("/getAllEvents", costSheetApprovalAccess, getAllEvents);
+router.get("/getAllEvents", opsAdmin, getAllEvents);
 module.exports = router;

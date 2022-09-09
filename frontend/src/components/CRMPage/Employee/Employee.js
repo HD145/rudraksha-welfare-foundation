@@ -18,6 +18,7 @@ import pdfMake from "pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 import htmlToPdfmake from "html-to-pdfmake";
 import logo from "../Reports/logo";
+import { setuid } from "process";
 
 const Employee = () => {
   const [firstname, setfirstname] = useState("");
@@ -29,6 +30,7 @@ const Employee = () => {
   const [phone, setphone] = useState("");
   const [email, setemail] = useState("");
   const [branch, setBranch] = useState("");
+  const [username, setUsername] = useState("");
   const [experience, setexperience] = useState("");
   const [educationStatus, seteducationStatus] = useState("");
   const [designation, setdesignation] = useState("");
@@ -279,6 +281,7 @@ const Employee = () => {
       formdata.set("mothername", mothername);
       formdata.set("Dob", Dob);
       formdata.set("branch", branch);
+      formdata.set("username", username);
       formdata.set("gender", gender);
       formdata.set("phone", phone);
       formdata.set("email", email);
@@ -324,6 +327,7 @@ const Employee = () => {
       setmothername("");
       setDob("");
       setBranch("");
+      setUsername("");
       setphone("");
       setgender("");
       setemail("");
@@ -520,6 +524,17 @@ const Employee = () => {
                     name="branch"
                     value={branch}
                     onChange={(e) => setBranch(e.target.value)}
+                    required
+                  />
+                </Form.Group>
+
+                <Form.Group as={Col} md="4" controlId="validationFormik01">
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                     required
                   />
                 </Form.Group>

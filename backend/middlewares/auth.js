@@ -2,56 +2,19 @@ const jwt = require("jsonwebtoken");
 const Employee = require("../models/employee");
 const Admin = require("../models/Admin_Rudraksha.model");
 const Director = require("../models/Director_Rudraksha.model");
-
-const adminAccess = async (req, res, next) => {
-  try {
-    const authorization = req.headers.authorization;
-    if (authorization) {
-      const token = authorization.slice(7, authorization.length);
-      const decode = jwt.verify(token, process.env.secret);
-
-      if (
-        decode.email === process.env.ADMIN_USERNAME &&
-        decode.password === process.env.ADMIN_PASSWORD
-      ) {
-        next();
-      } else {
-        res.json({
-          success: false,
-          error: "You are not authorized to use this page!",
-          message: "You are not authorized to use this page!",
-        });
-      }
-    } else {
-      res.json({
-        success: false,
-        error: "You are not authorized to use this page!",
-        message: "You are not authorized to use this page!",
-      });
-    }
-  } catch (error) {
-    console.log(error);
-    res
-      .status(500)
-      .json({ success: false, message: "Something went wrong", error: error });
-  }
-};
+const Ops = require("../models/ops");
+const Recept = require("../models/recept");
 
 const authentication = async (req, res, next) => {
   try {
     const authorization = req.headers.authorization;
     if (authorization) {
+      
       const token = authorization.slice(7, authorization.length);
       const decode = jwt.verify(token, process.env.secret);
-      // if (
-      //   decode.email === process.env.ADMIN_USERNAME &&
-      //   decode.password === process.env.ADMIN_PASSWORD
-      // ) {
-      //   //for admin access part, few work is left
-      //   next();
-      // } else
+
       if (decode.id) {
-        const emp = await Employee.findOne({ _id: decode.id });
+        const emp = await Employee.findOne({ _id: decode.id }, {password: 0});
         req.emp = emp;
         next();
       } else {
@@ -121,6 +84,131 @@ const costSheetApprovalAccess = async (req, res, next) => {
   }
 };
 
+async function opsAdminRecept(req, res, next){
+  // accessing new table
+  try{
+    const authorization = req.headers.authorization;
+    
+    if (authorization) {
+      const token = authorization.slice(7, authorization.length);
+      const decode = jwt.verify(token, process.env.secret);
+      // console.log(decode.id, decode.email);
+
+      if(decode.id){
+        const emp = await Employee.findOne({_id: decode.id}, {password: 0});
+        const admin = await Admin.findOne({empId: decode.id});
+        const ops = await Ops.findOne({empId: decode.id});
+        const recept = await Recept.findOne({empId: decode.id});
+        if(emp){
+          if(admin){
+            console.log("You are an Admin");
+            req.emp = emp;
+            next();
+          } else if(ops) {
+            console.log("You are the OPS");
+            req.emp = emp;
+            next();
+          } else if(recept) {
+            console.log("You are the Recept");
+            req.emp = emp;
+            next();
+          } else {
+            console.log("You are a normal Employee !!");
+            res.status(401).json({
+              success: false,
+              data: "Not an Admin or OPS or Recept",
+              message: "Not Authorized !!"
+            })
+          }
+        } else {
+          console.log("No Records Found !!");
+          res.status(400).json({
+            success: false,
+            data: "No records found for the ID in Employee !!",
+            message: "Not Authorized !!"
+          })
+        }
+      } else {
+        console.log("No ID to decode !!");
+        res.status(400).json({
+          status: false,
+          data: "No ID to be decoded",
+          message: "Cannot Proceed !!"
+        })
+      }
+
+    } else {
+      res.status(401).json({
+        status: false,
+        data: "No Authorization Provided !!",
+        message: "Cannot Proceed Further !!"
+      })
+    }
+  }catch(e){
+    console.log(e);
+  }
+}
+
+async function opsAdmin(req, res, next){
+  // accessing new table
+  try{
+    const authorization = req.headers.authorization;
+    
+    if (authorization) {
+      const token = authorization.slice(7, authorization.length);
+      const decode = jwt.verify(token, process.env.secret);
+      // console.log(decode.id, decode.email);
+
+      if(decode.id){
+        const emp = await Employee.findOne({_id: decode.id}, {password: 0});
+        const admin = await Admin.findOne({empId: decode.id});
+        const ops = await Ops.findOne({empId: decode.id});
+        if(emp){
+          if(admin){
+            console.log("You are an Admin");
+            req.emp = emp;
+            next();
+          } else if(ops) {
+            console.log("You are the OPS !!");
+            req.emp = emp;
+            next();
+          } else {
+            console.log("You are a normal Employee !!");
+            res.status(401).json({
+              success: false,
+              data: "Not an OPS or Admin",
+              message: "Not Authorized !!"
+            });
+          }
+        } else {
+          console.log("No Records Found !!");
+          res.status(400).json({
+            success: false,
+            data: "No records found for the ID in Employee !!",
+            message: "Not Authorized !!"
+          })
+        }
+      } else {
+        console.log("No ID to decode !!");
+        res.status(400).json({
+          status: false,
+          data: "No ID to be decoded",
+          message: "Cannot Proceed !!"
+        })
+      }
+
+    } else {
+      res.status(401).json({
+        status: false,
+        data: "No Authorization Provided !!",
+        message: "Cannot Proceed Further !!"
+      })
+    }
+  }catch(e){
+    console.log(e);
+  }
+}
+
 async function onlyAdmin(req, res, next){
   // accessing new table
   try{
@@ -182,8 +270,9 @@ async function onlyAdmin(req, res, next){
 }
 
 module.exports = {
-  adminAccess,
+  opsAdmin,
   authentication,
   costSheetApprovalAccess,
-  onlyAdmin
+  onlyAdmin,
+  opsAdminRecept
 };

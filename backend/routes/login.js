@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { createEmployeeCredentials, signIn } = require("../controllers/Login");
-const { adminAccess, onlyAdmin } = require("../middlewares/auth");
+const { onlyAdmin } = require("../middlewares/auth");
 
 //this route creates the password using empId (can be created only by admins)
 router.post(

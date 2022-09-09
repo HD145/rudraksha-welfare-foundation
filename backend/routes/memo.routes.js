@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const schedule = require("node-schedule");
 
-const {onlyAdmin, authentication} = require("../middlewares/auth");
+const {opsAdmin} = require("../middlewares/auth");
 
 const memoModel = require("../models/memo.model");
 
@@ -57,7 +57,7 @@ router.get("/getMemoCount", async(req, res) => {
 });
 
 // CAN ONLY BE PERFORMED BY SPLLY. AUTHORIZED EMPLOYEES
-router.post("/issueMemo", async(req, res) => {
+router.post("/issueMemo", opsAdmin, async(req, res) => {
     const {empId, memoDate, memoType, remarks} = req.body;
     const obj = {"for": memoDate, "memoType": memoType, "remarks": remarks};
     try{

@@ -12,7 +12,7 @@ const digital = require("../models/salesDIGITAL.model");
 const fncg = require("../models/salesFNCG.model");
 //-------------------------------------------------------
 
-router.post("/pms-monthly", async (req, res) => {
+router.post("/pms-monthly", onlyAdmin, async (req, res) => {
     const { empId, month, year } = req.body;
     try {
         const recruiter = await nmsEmp.findOne({ empId });
@@ -216,7 +216,7 @@ router.post("/pms-monthly", async (req, res) => {
     }
 });
 
-router.post("/pms-quarterly", async (req, res) => {
+router.post("/pms-quarterly", onlyAdmin, async (req, res) => {
     const { empId, quarter, year } = req.body;
     try {
         const recruiter = await nmsEmp.findOne({ empId });
@@ -495,7 +495,7 @@ router.post("/pms-quarterly", async (req, res) => {
     }
 });
 
-router.post("/pms-halfYearly", async (req, res) => {
+router.post("/pms-halfYearly", onlyAdmin, async (req, res) => {
     const { empId, half, year } = req.body;
     try {
         const recruiter = await nmsEmp.findOne({ empId });
@@ -724,7 +724,7 @@ router.post("/pms-halfYearly", async (req, res) => {
     }
 });
 
-router.post("/pms-yearly", async (req, res) => {
+router.post("/pms-yearly", onlyAdmin, async (req, res) => {
     const { empId, year } = req.body;
     try {
         const recruiter = await nmsEmp.findOne({ empId });

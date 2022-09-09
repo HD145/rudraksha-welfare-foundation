@@ -5,6 +5,8 @@ const schedule = require("node-schedule");
 const digitalSaleModel = require("../models/salesDIGITAL.model");
 const fncgSalesModel = require("../models/salesFNCG.model");
 
+const {opsAdmin} = require("../middlewares/auth");
+
 schedule.scheduleJob("0 0 * * *", async() => {
     const todayDate = new Date();
     try{
@@ -103,7 +105,7 @@ router.get("/digitalSalesTracker", async(req, res) => {
     }
 });
 
-router.post("/addSales", async(req, res) => {
+router.post("/addSales", opsAdmin, async(req, res) => {
     const {empId, saleType, amount, saleDate, remarks} = req.body;
     const obj = {"for": saleDate, "amount": amount, "remarks": remarks};
     try{

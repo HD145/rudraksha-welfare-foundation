@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const {authentication, onlyAdmin} = require('../middlewares/auth');
+const {opsAdminRecept} = require('../middlewares/auth');
 
 const courierModel = require('../models/courier.model');
  
-router.post('/addCourier', async(req, res) => {
+router.post('/addCourier', opsAdminRecept, async(req, res) => {
     try{
         const newCourier = new courierModel({
             ...req.body

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const adminSchema = new mongoose.Schema({
+const receptSchema = new mongoose.Schema({
     empId: {
         type: mongoose.Types.ObjectId,
         require: true,
@@ -18,13 +18,16 @@ const adminSchema = new mongoose.Schema({
         unique: true,
         ref: "Employee"
     },
+
     username: {
         type: String,
         require: true,
         unique: true,
         ref: "Employee"
     }
+
+
 }, {timestamps: true});
 
-const Admin = mongoose.model("Admin", adminSchema);
-module.exports = Admin;
+const Recept = mongoose.model("Recept", receptSchema);
+module.exports = Recept;

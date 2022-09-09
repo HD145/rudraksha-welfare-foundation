@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const adminSchema = new mongoose.Schema({
+const opsSchema = new mongoose.Schema({
     empId: {
         type: mongoose.Types.ObjectId,
         require: true,
@@ -24,7 +24,9 @@ const adminSchema = new mongoose.Schema({
         unique: true,
         ref: "Employee"
     }
+
+
 }, {timestamps: true});
 
-const Admin = mongoose.model("Admin", adminSchema);
-module.exports = Admin;
+const Ops = mongoose.model("Ops", opsSchema);
+module.exports = Ops;

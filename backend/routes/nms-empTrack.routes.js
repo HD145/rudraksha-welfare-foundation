@@ -4,7 +4,7 @@ const schedule = require("node-schedule");
 const _ = require("lodash");
 
 // Auth Middlewares
-const {onlyAdmin, authentication} = require("../middlewares/auth");
+const {opsAdmin, authentication} = require("../middlewares/auth");
 
 // Models
 const empTrackModel = require("../models/nms-empTrack.model");
@@ -214,7 +214,7 @@ router.post("/add-NMS-Volunteers", authentication, async(req, res) => {
     }
 });
 
-router.post("/getVolunteers-ondemand", onlyAdmin, async(req, res) => {
+router.post("/getVolunteers-ondemand", opsAdmin, async(req, res) => {
     let {date1} = req.body;
     const dt = new Date(date1);
     // console.log(dt);
@@ -245,7 +245,7 @@ router.post("/getVolunteers-ondemand", onlyAdmin, async(req, res) => {
     }
 });
 
-router.post("/acknowledgeVolunteers", onlyAdmin, async(req, res) => {
+router.post("/acknowledgeVolunteers", opsAdmin, async(req, res) => {
     const {approve, volId} = req.body;
     try{
         const vol = await volunteerNMSModel.findOne({_id: volId});
@@ -287,7 +287,7 @@ router.post("/acknowledgeVolunteers", onlyAdmin, async(req, res) => {
     }
 });
 
-router.post("/activeVolunteer", onlyAdmin, async(req, res) => {
+router.post("/activeVolunteer", opsAdmin, async(req, res) => {
     const {volId} = req.body;
     try{
         const volunteer = await volunteerNMSModel.findOne({_id: volId});

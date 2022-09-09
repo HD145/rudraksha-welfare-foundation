@@ -41,6 +41,7 @@ app.use("/api/nms", require("./routes/nms-empTrack.routes"));
 app.use("/api/salesms", require("./routes/salesMS.routes"));
 app.use("/api/memo", require("./routes/memo.routes"));
 app.use("/api/courier", require("./routes/courier.routes"));
+app.use("/api", require('./routes/ops.routes'));
 
 // reports apis
 app.use("/api/reports", require("./reports/employeeDetails"));
