@@ -8,6 +8,7 @@ import "./formReg.css"
 import styles1 from "./Login.module.css";
 import logo from "../Reports/logo";
 
+
 const Register = () => {
   const [data,setData]=useState({
     empId:"",
@@ -101,12 +102,13 @@ setData({
       </form>
     </div> */}
 
-
+    <div className="container-fluid" style={{"height":"100vh", "backgroundImage":`url("https://www.cio.com/wp-content/uploads/2021/12/it-security_lock_cybersecurity_breach_alignment-100801286-orig.jpg?quality=50&strip=all&w=1024")`, "background-repeat": "no-repeat","background-size":"cover" }}>
+    <div className="container">
     <div className={styles1.login__main}>
-      <form className={styles1.login__form} onSubmit={handleSubmit}>
+      <form className={styles1.login__form} onSubmit={handleSubmit} style={{"margin-top":"5rem"}}>
         <div className="container"style={{"display":"flex"}}>
-          <img src={require('../../../Images/LogoLoad.jpeg')} style={{'width':"5rem"}}></img>
-        <h3 style={{"margin":"21px"}}><u className="my-2">Registration</u></h3>
+          <img src={require('../../../Images/LogoLoad.jpeg')} style={{'width':"5rem" ,"margin-left":"-2rem"}}></img>
+        <h3 style={{"margin":"21px"}}><u className="my-2">REGISTRATION</u></h3>
         </div>
       <hr></hr>
         <div className="mb-3">
@@ -146,7 +148,8 @@ setData({
         <div style={{ color: "red" }}>{error}</div>
       </form>
     </div>
-   
+    </div>
+    </div>
     </>
   );
 };

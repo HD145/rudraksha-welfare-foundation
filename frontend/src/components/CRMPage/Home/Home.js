@@ -7,10 +7,30 @@ import Nav from "react-bootstrap/Nav";
 // import { useHistory } from "react-router-dom";
 // import activestatus from "./activestatus"
 import axios from "axios";
+// import styles1 from "./Login.module.css";
+// import logo from "../Reports/logo";
 
 import styles from "./Home.module.css";
 const Home = () => {
+
+
+  const [data,setData]=useState({
+    empId:"",
+    password:""
+  })
+  const [error, setError] = useState("");
+  const [btndisable, setDisable] = useState(false);
+
   const navigate = useHistory();
+
+  // useEffect(() => {
+  //   if (JSON.parse(localStorage.getItem("rudraksha"))) {
+  //     navigate.push("/crm");
+  //   }
+  // }, []);
+
+
+  // const navigate = useHistory();
   useEffect(() => {
     if (!JSON.parse(localStorage.getItem("rudraksha"))) {
       return navigate.push("/crmlogin");
@@ -82,16 +102,13 @@ const Home = () => {
       <li class="nav-item">
         <a class="nav-link" href="/costsheet">Cost Sheet</a>
       </li>
-      {/* </ul>
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto "> */}
+     
       <li class="nav-item mr-10 ">
         <a class="nav-link" onClick={logout}>Log Out</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/Register">Register</a>
+        {/* <a class="nav-link" data-toggle="modal" data-target="#myModal">Register</a> */}
       </li>
     </ul>
     </div>
@@ -152,6 +169,10 @@ const Home = () => {
         </Container> */}
       </nav>
       <div className={styles.crm__img}></div>
+
+  
+
+
     </>
   );
 };

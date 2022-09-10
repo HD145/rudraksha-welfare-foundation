@@ -3,10 +3,10 @@
     justify-content: center;
     /* min-height: 100vh; */
     /* background-color:#167bff; */
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
 }
 .login__form {
-    width: 450px;
+    width: 385px;
     border: solid white 4px;
     padding: 40px 55px 45px 55px;
     height: fit-content;
