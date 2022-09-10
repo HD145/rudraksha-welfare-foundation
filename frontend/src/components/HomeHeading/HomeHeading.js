@@ -5,7 +5,7 @@ function HomeHeading() {
   return (
     <div className='main'>
     <div class="upperlogo">
-      <img src={require('../../Images/Upperlogo1.jpeg')
+      <img src={require('../../Images/Upperlogo1.jpg')
                 } class="img-fluid ulogoimage" alt=""/>
       <img src={require('../../Images/Upperlogo2.jpeg')
                 } class="img-fluid ulogoimage" alt=""/>

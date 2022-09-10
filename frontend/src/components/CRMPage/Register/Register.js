@@ -4,6 +4,10 @@ import axios from "axios";
 import styles from "./Register.module.css";
 // import Home from "../Home/Home";
 import CRMNavbar from "../CRMNavbar/CRMNavbar"
+import "./formReg.css"
+import styles1 from "./Login.module.css";
+import logo from "../Reports/logo";
+
 const Register = () => {
   const [data,setData]=useState({
     empId:"",
@@ -54,7 +58,7 @@ setData({
   return (
     <>
     <CRMNavbar/>
-    <div className={styles.login__main} className="mt-5">
+    {/* <div className={styles.login__main} className="mt-5">
       <form className={styles.login__form} onSubmit={handleSubmit}>
         <h3>Register</h3>
 
@@ -95,7 +99,54 @@ setData({
     
         <div style={{ color: "red" }}>{error}</div>
       </form>
+    </div> */}
+
+
+    <div className={styles1.login__main}>
+      <form className={styles1.login__form} onSubmit={handleSubmit}>
+        <div className="container"style={{"display":"flex"}}>
+          <img src={require('../../../Images/LogoLoad.jpeg')} style={{'width':"5rem"}}></img>
+        <h3 style={{"margin":"21px"}}><u className="my-2">Registration</u></h3>
+        </div>
+      <hr></hr>
+        <div className="mb-3">
+          <label>Enter Username</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter username"
+            name="empId"
+            value={data.empId}
+            onChange={upData}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label>Enter Password</label>
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Enter password"
+            name="password"
+            value={data.password}
+            onChange={upData}
+          />
+        </div>
+
+        <div className="d-grid mt-3">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={btndisable}
+          >
+            Submit
+          </button>
+        </div>
+       
+        <div style={{ color: "red" }}>{error}</div>
+      </form>
     </div>
+   
     </>
   );
 };

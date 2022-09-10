@@ -35,8 +35,8 @@ const CRMNavbar = () => {
 </button>
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<ul class="navbar-nav mr-auto">
-<li class="nav-item active">
+<ul class="navbar-nav mr-auto justify-content-between w-100">
+<li class="nav-item">
   <a class="nav-link" href="/rms" >RMS </a>
   
 </li>
@@ -88,7 +88,6 @@ const CRMNavbar = () => {
 </ul>
 
 </div>
-
 
 </nav>
 {/* <div className={styles.crm__img}></div> */}

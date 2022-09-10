@@ -38,8 +38,8 @@ const Home = () => {
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" class={status}>
+    <ul class="navbar-nav mr-auto justify-content-between w-100">
+      <li class="nav-item">
         <a class="nav-link" href="/rms" onClick={statusset}>RMS </a>
         
       </li>
@@ -82,15 +82,20 @@ const Home = () => {
       <li class="nav-item">
         <a class="nav-link" href="/costsheet">Cost Sheet</a>
       </li>
-      <li class="nav-item">
+      {/* </ul>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto "> */}
+      <li class="nav-item mr-10 ">
         <a class="nav-link" onClick={logout}>Log Out</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/Register">Register</a>
       </li>
     </ul>
-    
-  </div>
+    </div>
+  
 
 
         {/* <Container>

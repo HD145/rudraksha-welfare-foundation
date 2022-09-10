@@ -1,18 +1,22 @@
 import React from "react";
 import "./Nav.css";
+import { useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Navbar() {
-  return (
-<>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-0 .nav-fill w-100">
+  return (
+  <>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-0">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto justify-content-between w-100">
       <li class="nav-item">
         <a class="nav-link" href="/">Home</a>
       </li>
@@ -29,8 +33,6 @@ function Navbar() {
         <a class="nav-link" href="/mission">Mission</a>
       </li>
       
-      
-     
       
       
       <li class="nav-item dropdown">
@@ -101,8 +103,10 @@ function Navbar() {
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/crmlogin">CRM</a>
+        <a class="nav-link"  href="/crmlogin">CRM</a>
       </li>
+
+
       <li class="nav-item">
         <a class="nav-link" href="/faq">FAQ</a>
       </li>
@@ -122,8 +126,6 @@ function Navbar() {
     
   </div>
 </nav>
-
-
 
 
 
