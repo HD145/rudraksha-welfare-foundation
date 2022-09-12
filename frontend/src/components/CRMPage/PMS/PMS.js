@@ -171,11 +171,13 @@ else if(halfYear==="Jul-Dec"){
               }
             ).then((res)=>{
               console.log(res);
+
               setSuccess(res.data.success);
               setReport(res.data.data.graphical);
               setTargetAchieve(res.data.data.target_achieved);
               setGrade(res.data.data.grades);
             }).catch((err)=>{
+              
               console.log(err);
             })
         }
@@ -244,6 +246,7 @@ else if(halfYear==="Jul-Dec"){
               }
             ).then((res)=>{
               console.log(res);
+              // if(res.status()===401) alert("s")
               setSuccess(res.data.success);
               setReport(res.data.data.graphical)
               setTargetAchieve(res.data.data.target_achieved);

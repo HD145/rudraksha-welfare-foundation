@@ -3,7 +3,9 @@ import './EndIcons.css'
 
 function EndIcons() {
     return (
-        <div>
+       <>
+       
+       <div>
             <div className='container-fluid EndIconsMain' >
 
                 <div className='Slider-Track'>
@@ -338,9 +340,15 @@ https://www.linkedin.com/in/utplakshi-2b99a5190/"><img className='Linked' src={r
                         <img className="InternsImg" src={require('../../Interns(new)/UI_UX/ria raina.png')} />
 
                         </div>
-                        <div className='Slide'>
+                        {/* <div className='Slide'>
                         <a href="https://www.linkedin.com/in/aarushi-sethi-06081997"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/REMAINING/aarushi.jpg')} />
+
+                        </div> */}
+
+                        <div className='Slide'>
+                        <a href="https://www.linkedin.com/in/aarushi-sethi-06081997"><img className='Linked' src={require('../../Images/linked.png')}/></a>
+                        <img className="InternsImg" src={require('../../Interns(new)/Graphic Designer/aarushi_sethi.png')} />
 
                         </div>
 
@@ -366,11 +374,11 @@ https://www.linkedin.com/in/deepanshu-m-7893a1118"><img className='Linked' src={
                         <img className="InternsImg" src={require('../../Interns(new)/FRONTEND DEV/FrontEnd_ShivanshNema.png')} />
 
                         </div>
-                        <div className='Slide'>
+                        {/* <div className='Slide'>
                         <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/LINUX ADMINISTRATOR/LinuxAdministrator_AmitSaini.jpg')} />
 
-                        </div>
+                        </div> */}
                       
                         <div className='Slide'>
                         <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
@@ -391,19 +399,23 @@ https://www.linkedin.com/in/deepanshu-m-7893a1118"><img className='Linked' src={
                         </div>
 
                         <div className='Slide'>
-                        <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
+                        <a href="https://www.linkedin.com/in/harshit-dwivedi-111696213/"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/harshit_dwivedi.png')} />
 
                         </div>
 
-                        <div className='Slide'>
+                        {/* <div className='Slide'>
                         <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/Graphic Designer/aarushi_sethi.png')} />
 
-                        </div>
+                        </div> */}
                     </div>
                     </div>
                     </div>
-                   )
-                   }
-                   export default EndIcons
+
+
+       </>
+        
+    )
+}
+export default EndIcons
