@@ -313,6 +313,7 @@ const Employee = () => {
       console.log("data", data);
 
       if (data.data.error) {
+        
         throw new Error(data.data.error);
       }
 
@@ -352,6 +353,7 @@ const Employee = () => {
       setBtnData("Employee Added ✔");
       setError("");
     } catch (error) {
+      // alert("You are a normal employee. You are not allowed to perform this action.")
       setDisableBtn(false);
       setBtnData("Add Employee");
       setError(error.message);
