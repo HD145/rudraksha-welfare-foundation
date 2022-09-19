@@ -404,6 +404,12 @@ https://www.linkedin.com/in/deepanshu-m-7893a1118"><img className='Linked' src={
 
                         </div>
 
+                        <div className='Slide'>
+                        <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
+                        <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/sharwari_dongle.jpg')} />
+
+                        </div>
+
                         {/* <div className='Slide'>
                         <a href="#"><img className='Linked' src={require('../../Images/linked.png')}/></a>
                         <img className="InternsImg" src={require('../../Interns(new)/Graphic Designer/aarushi_sethi.png')} />
