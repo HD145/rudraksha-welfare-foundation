@@ -4,7 +4,7 @@ import './Homepara.css'
 function Homepara() {
     return (
         <div>
-            <div className='homep'>
+            <div className='homep mx-4'>
                 <p>
                     <p style={{"font-weight":"100","font-size":"1.1rem"}}>
                         RUDRAKSHA has been initiated with a precise extraction of wisdom reasoning which comprises a definite
