@@ -85,13 +85,6 @@ function Homeactions() {
 
 
 
-
-
-
-
-
-
-
             </div>
 
             <div className='SmokyStrip2'>
