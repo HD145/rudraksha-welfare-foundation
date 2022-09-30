@@ -11,7 +11,7 @@ function Pro8() {
       <Navbar/>
     <div className='BodyPro8'>
             <div className='HeaderPro8'>
-                <img src={require('../../Images/header8.jpg')} />
+                <img src={require('../../Images/header8.png')} />
 
 
             </div>
