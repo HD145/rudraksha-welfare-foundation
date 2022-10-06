@@ -8,8 +8,6 @@
     overflow-x: scroll;
 }
 
-
-
 .Slider-Track{
   display: flex;
   width: calc(250px * 60);
@@ -91,7 +89,7 @@
     width: 5px;
     top: 10px;
     left:10px;
-    
-  
+
   }
 }
+
