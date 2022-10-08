@@ -443,6 +443,10 @@ https://www.linkedin.com/in/deepanshu-m-7893a1118"><img className='Linked' src={
                         <a href="#"> <img className="InternsImg" src={require('../../Interns(new)/REMAINING/Ms-Manaya-Gupta.png')} /></a>
                         </div>
 
+                        <div className='Slide'>
+                        <a href="#"> <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/nishant.png')} /></a>
+                        </div>
+
                     </div>
                     </div>
                     </div>
