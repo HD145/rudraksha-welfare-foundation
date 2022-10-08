@@ -18,9 +18,7 @@ function Homepro() {
         <h1 style={{"margin-top":"-1rem"}}>OUR PROJECTS</h1>
       </div>
         
-        
 
-     
       <div id="carouselExampleControls" className="carousel slide carousel-fade m-3" data-bs-ride="carousel">
         <div className='ProjectCarousel'>
           <div className="carousel-inner">
@@ -40,7 +38,7 @@ function Homepro() {
 
 
                 <div class="card shadow  gradientb" >
-                  <img src={require('../../Images/2P.jpg')
+                  <img src={require('../../Images/2P.png')
                   } class="card-img-top" alt="..." />
                   <div class="card-body">
                   <img className='ProLogo' src={require('../../Images/LogoLoad.jpeg')
@@ -127,7 +125,7 @@ function Homepro() {
                 </div>
 
                 <div class="card gradientb" >
-                  <img src={require('../../Images/9P.jpg')
+                  <img src={require('../../Images/9P.png')
                   } class="card-img-top" alt="..." />
                   <div class="card-body"><img className='ProLogo' src={require('../../Images/LogoLoad.jpeg')
                 } ></img>
