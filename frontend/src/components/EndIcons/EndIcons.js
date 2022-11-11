@@ -427,11 +427,11 @@ https://www.linkedin.com/in/deepanshu-m-7893a1118"><img className='Linked' src={
                         <img className="InternsImg" src={require('../../Interns(new)/REMAINING/mohit_bhoir.jpeg')} />
 
                         </div>
-                        <div className='Slide'>
+                        {/* <div className='Slide'>
                         <a href="#"></a>
                         <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/vaibhav.png')} />
 
-                        </div>
+                        </div> */}
 
                         <div className='Slide'>
                         <a href="#"> <img className="InternsImg" src={require('../../Interns(new)/Graphic Designer/lucky.jpeg')} /></a>
@@ -446,6 +446,19 @@ https://www.linkedin.com/in/deepanshu-m-7893a1118"><img className='Linked' src={
                         <div className='Slide'>
                         <a href="#"> <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/nishant.png')} /></a>
                         </div>
+
+                        {/* <div className='Slide'>
+                        <a href="#"> <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/nishant.png')} /></a>
+                        </div> */}
+
+                        <div className='Slide'>
+                        <a href="#"> <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/pawan_jha.png')} /></a>
+                        </div>
+
+                        <div className='Slide'>
+                        <a href="#"> <img className="InternsImg" src={require('../../Interns(new)/all_web_Devs/vaibhav_intern.png')} /></a>
+                        </div>
+
 
                     </div>
                     </div>
