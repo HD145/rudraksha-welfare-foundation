@@ -46,7 +46,7 @@ function Navbar() {
           <a class="dropdown-item" href="/pro4">4. Environment Armour</a>
           <a class="dropdown-item" href="/pro5">5. Gender Justice</a>
           <a class="dropdown-item" href="/pro6">6. Gracious Justice</a>
-          <a class="dropdown-item" href="/pro7">7. Human Rights</a>
+          <a class="dropdown-item" href="/pro7">7. Human Funeral Rights</a>
           <a class="dropdown-item" href="/pro8">8. Old Age,Orphanage & Blind Home</a>
           <a class="dropdown-item" href="/pro9">9. Sports Training Support</a>
           <a class="dropdown-item" href="/pro10">10. True Eternal Warriors</a>
