@@ -125,7 +125,7 @@ function Homepro() {
                 </div>
 
                 <div class="card gradientb" >
-                  <img src={require('../../Images/9P.png')
+                  <img src={require('../../Images/9Pi.jpg')
                   } class="card-img-top" alt="..." />
                   <div class="card-body"><img className='ProLogo' src={require('../../Images/LogoLoad.jpeg')
                 } ></img>
